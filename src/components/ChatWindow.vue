@@ -1,7 +1,7 @@
 <template>
-  <div class="chat-window">
+  <div class="chat-window" >
       <div v-if="error"></div>
-      <div v-if="documents" class="messages">
+      <div v-if="documents" class="messages" ref="chat" >
           <div class="single" v-for="doc in formattedDocuments" :key="doc.id">
               <span class="created-at">{{doc.createdAt}}</span>
               <span class="name">{{doc.name}}</span>
@@ -15,9 +15,13 @@
 import getCollection from '../composables/getCollection'
 import {formatDistanceToNow} from 'date-fns'
 import { computed } from '@vue/reactivity'
+import { onUpdated } from '@vue/runtime-core'
+import { ref } from "@vue/reactivity";
 export default {
     setup(){
         const {error,documents} = getCollection('messages')
+        
+        const chat = ref(null)
 
         const formattedDocuments = computed(()=>{
             if(documents.value){
@@ -26,8 +30,20 @@ export default {
                     return {...doc, createdAt: time}
                 })
             }
+        }) 
+
+        onUpdated(() => {
+          
+          chat.value.scrollTop = chat.value.scrollHeight;
         })
-        return {error,documents,formattedDocuments}
+
+      
+        
+
+        
+
+        
+        return {error,documents,formattedDocuments,chat}
     }
 
 }
