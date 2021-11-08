@@ -1,6 +1,9 @@
-About the project 
+About the project:
 ###
-It's a simple chatting app made with Vue 3(composition API), Vue Router and Firebase + firestore.
+It's a simple chatting app similar to old chatrooms.
+Front-end was made using Vue 3 with composition API and Vue Router.
+Firebase + firestore handles the database, auth and hosting.
+
 
 ## Project setup
 ```
