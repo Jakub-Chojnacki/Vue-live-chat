@@ -1,4 +1,5 @@
-About the project
+About the project 
+###
 It's a simple chatting app made with Vue 3(composition API), Vue Router and Firebase + firestore.
 
 ## Project setup
