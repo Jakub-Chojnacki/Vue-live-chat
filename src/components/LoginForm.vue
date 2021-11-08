@@ -3,7 +3,7 @@
       <input type="email" required  placeholder="email" v-model="email">
       <input type="password" required placeholder="password" v-model="password">
       <div class="error">{{error}}</div>
-      <button>Log in</button>
+      <button class="button--red">Log in</button>
   </form>
 </template>
 
@@ -31,6 +31,8 @@ export default {
 }
 </script>
 
-<style>
+<style >
+
+
 
 </style>
