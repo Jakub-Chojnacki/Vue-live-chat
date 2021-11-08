@@ -1,4 +1,6 @@
-# live-chat
+About the project
+It's a simple chatting app made with Vue 3(composition API), Vue Router and Firebase + firestore.
+
 ## Project setup
 ```
 npm install
@@ -11,6 +13,5 @@ npm run serve
 ```
 npm run build
 ```
-###About the project
-It's a simple chatting app made with Vue 3(composition API), Vue Router and Firebase + firestore.
+
 
